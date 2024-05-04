@@ -1,0 +1,15 @@
+
+(fun seq (before i32, after i32) after)
+
+(fun fibgo (current i32 , prev i32, num i32, end i32)
+    (let (next (+ current prev))
+        (seq
+         (print current)
+         (if (= num end) 0 (fibgo next current (+ num 1) end))
+         
+         )
+        )
+    )
+
+(fun main ( )  
+  (let (end (get)) (fibgo 1 1 0 end)))
